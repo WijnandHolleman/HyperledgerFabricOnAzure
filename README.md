@@ -11,7 +11,7 @@ Install Hyperledger on Azure
 6. Set static IP address
 7. SSH into VM
 8. Execute commands from Install Hyperledger on Azure.txt file
-9. run playgound: http://<azure dns>:8080
-10. Rest server: http://<azure dns>:3000
+9. run playgound: http://&lt;azure dns&gt;:8080
+10. Rest server: http://&lt;azure dns&gt;:3000
   
 
