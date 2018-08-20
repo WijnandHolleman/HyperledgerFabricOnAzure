@@ -1,0 +1,71 @@
+
+
+sudo apt-get install git
+
+wget https://storage.googleapis.com/golang/go1.9.2.linux-amd64.tar.gz
+
+sudo tar -xvf go1.9.2.linux-amd64.tar.gz
+sudo mv go /usr/loal
+
+mkdir go-dir
+
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go-dir
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+sudo nano ~/.profile
+
+in file at bottom:
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go-dir
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+
+sudo apt-add-repository ‘deb https://apt.dockerproject.org/repo ubuntu-xenial main’
+
+sudo apt-get update
+
+sudo apt-get install -y docker-engine
+
+docker
+
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose -v
+
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
+nvm install v8.9
+
+sudo apt install node-gyp
+
+npm install -g composer-cli
+
+npm install -g composer-rest-server
+
+npm install -g generator-hyperledger-composer
+
+npm install -g yo
+
+npm install -g composer-playground
+
+mkdir ~/fabric-dev-servers
+
+cd ~/fabric-dev-servers
+
+curl -O https://raw.githubusercontent.com/hyperledger/composer-tools/master/packages/fabric-dev-servers/fabric-dev-servers.tar.gz
+
+tar -xvf fabric-dev-servers.tar.gz
+
+sudo ./downloadFabric.sh
+
+sudo ./startFabric.sh
+
+sudo docker ps
+
+./createPeerAdminCard.sh
+
+composer-playground
