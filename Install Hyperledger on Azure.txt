@@ -74,3 +74,5 @@ sudo docker ps
 ./createPeerAdminCard.sh
 
 composer-playground
+
+composer-rest-server
